@@ -1,10 +1,22 @@
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
+var express = require('express');
+var path = require('path');
+var app = express(); //module.exports = express.createServer();
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public/imgs')));
+app.use(express.static(path.join(__dirname, 'bower_components')));
+app.set('view engine', 'ejs');
+app.get('/',function(req,res){
+	res.render('pages/index')
+});
+
+
+
+
+
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
+	console.log("Express server listening on port %d in %s mode", port, app.settings.env);
+});

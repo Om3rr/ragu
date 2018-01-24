@@ -1,0 +1,73 @@
+@font-face {
+	font-family: days;
+	src: url("//fonts/Days-Regular.otf");
+}
+@font-face {
+	font-family: days;
+	src: url("//fonts/Days-Bold.otf");
+	font-weight: bold;
+}
+@font-face {
+	font-family: days;
+	src: url("//fonts/Days-Nights.otf");
+	font-style: italic;
+}
+
+@font-face {
+	font-family: days;
+	src: url("//fonts/Days-NightsBold.otf");
+	font-style: italic;
+	font-weight: bold;
+}
+
+.col-block{
+	width: 20%;
+	height:100vh;
+	display: inline-block;
+}
+
+.col-content{
+	height:95vh;
+	position: relative;
+}
+
+.col-down{
+	text-align: center;
+	height:5vh;
+}
+
+.strip{
+	display: block;
+	height:100%;
+	width: 100%;
+}
+.name{
+	font-family: days;
+	font-size: 40px;
+	font-weight: bold;
+	color: #FFFF00;
+}
+
+.strip-container{
+	width: 384px;
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+}
+
+.bulb, .lock{
+	display: block;
+	margin:auto;
+	width: 50px;
+	padding-bottom: 10px;
+}
+
+.i.lock{
+	background: url('//icons/lock.svg');
+	display: block;
+	height:40px;
+}
+
+.locked{
+	width: 250px;
+}
