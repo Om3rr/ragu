@@ -11,8 +11,8 @@
         <div class="col-content">
             <img class="strip" src="{{currentStrips[category]['pic']}}">
             <div class="strip-container">
-                <img ng-if="!gotMatch(category)" class="bulb" src="icons/bulb.svg">
-                <img ng-if="gotMatch(category)" class="bulb" src="icons/bulbyellow.svg">
+                <img ng-if="!isLightOn(category)" class="bulb" src="icons/bulb.svg">
+                <img ng-if="isLightOn(category)" class="bulb" ng-click="openConnection(category)" src="icons/bulbyellow.svg">
                 <img ng-if="currentLock === category" class="lock" ng-click="changeLock(category)" src="icons/lockyellow.svg">
                 <img ng-if="currentLock !== category" class="lock" ng-click="changeLock(category)" src="icons/lock.svg">
                 <span class="name">{{currentStrips[category].name}}</span>
@@ -20,6 +20,23 @@
         </div>
         <div class="col-down">
             {{category}}
+        </div>
+        <div ng-class="{'col-overlay' : fadeCategory(category)}">
+            <div ng-if="content[category]['header']" class="hidden-header">
+                {{content[category]['header']}}
+            </div>
+            <div ng-if="content[category]['content']" class="hidden-content">
+                <span>{{content[category]['content']}}</span>
+            </div>
+            <div ng-if="content[category]['video']">
+                <iframe style="height: 18vw;width: 18vw;margin: 1.5vw;"
+                        src="{{content[category]['video']}}" frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+            <div ng-if="content[category]['href']" class="hidden-href">
+                <a href="{{content[category]['href']}}">מקור</a>
+            </div>
+
         </div>
     </div>
 </div>

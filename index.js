@@ -1,5 +1,7 @@
 var express = require('express');
 var path = require('path');
+var connections = require('./connections.json');
+var strips = require('./strips.json');
 var app = express(); //module.exports = express.createServer();
 
 
@@ -11,6 +13,14 @@ app.set('view engine', 'ejs');
 app.get('/',function(req,res){
 	res.render('pages/index')
 });
+
+app.get('/strips', function(req,res){
+	res.json(strips);
+});
+
+app.get('/connections', function(req,res){
+	res.json(connections);
+})
 
 
 

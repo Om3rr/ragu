@@ -13,6 +13,10 @@
 	font-style: italic;
 }
 
+body{
+	font-family: days;
+}
+
 @font-face {
 	font-family: days;
 	src: url("//fonts/Days-NightsBold.otf");
@@ -33,7 +37,14 @@
 
 .col-down{
 	text-align: center;
-	height:5vh;
+	height: 5vh;
+	background: #2B2B2B;
+	color: #FFFF00;
+	font-family: days;
+	font-style: italic;
+	font-size: 17px;
+	letter-spacing: 5px;
+	padding: 10px;
 }
 
 .strip{
@@ -42,24 +53,24 @@
 	width: 100%;
 }
 .name{
-	font-family: days;
 	font-size: 30px;
 	font-weight: bold;
 	color: #FFFF00;
+	letter-spacing: 1px;
 }
 
 .strip-container{
 	width: 20vw;
 	position: absolute;
 	text-align: center;
-	bottom: 0;
+	bottom: 20px;
 }
 
 .bulb, .lock{
 	display: block;
-	margin:auto;
-	width: 50px;
-	padding-bottom: 10px;
+	margin: auto;
+	width: 40px;
+	margin-bottom: 15px;
 }
 
 .i.lock{
@@ -70,4 +81,46 @@
 
 .locked{
 	width: 250px;
+}
+
+.col-overlay{
+	height: 95vh;
+	width: 20vw;
+	background: black;
+	z-index: 3;
+	position: absolute;
+	top: 0;
+	opacity: 0.85;
+}
+
+.hidden-content{
+	color: white;
+	text-align: right;
+	font-size: 20px;
+	direction: rtl;
+	padding: 45px;
+	padding-top: 80px;
+}
+
+.hidden-header{
+	color: white;
+	direction: rtl;
+	padding: 50px;
+	font-size: 90px;
+	letter-spacing: 4px;
+	line-height: 100px;
+	font-weight: bold;
+}
+
+.hidden-href{
+	text-align: right;
+	padding: 45px;
+	color: white;
+	padding-top: 0;
+}
+.hidden-href > a{
+	color: #FFFF00;
+	text-decoration: none;
+	font-size: 16px;
+	letter-spacing: 1px;
 }
