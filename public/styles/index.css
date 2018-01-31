@@ -115,9 +115,10 @@ body{
 
 .hidden-href{
 	text-align: right;
-	padding: 45px;
+	padding: 30px;
 	color: white;
 	padding-top: 0;
+	font-weight: italic;
 }
 .hidden-href > a{
 	color: #FFFF00;
