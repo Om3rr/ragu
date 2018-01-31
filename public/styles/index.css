@@ -50,7 +50,9 @@ body{
 	font-style: italic;
 	font-size: 17px;
 	letter-spacing: 5px;
-	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .strip{
@@ -165,8 +167,8 @@ body{
 .hidden-picture {
 	align-items: center;
 	display: flex;
-	justify-content: center;
-	margin: 20px 0;
+	justify-content: flex-start;
+	width: 20vw;
 }
 
 
