@@ -19,6 +19,7 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 		Promise.all(awaits).then(function(data){
 			$scope.strips = data[0].data;
 			$scope.connections = data[1].data;
+			$scope.loadAllPics();
 			$scope.shuffle();
 		});
 	};
@@ -160,6 +161,15 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 		$scope.onboardz = true;
 		setTimeout(function(){$scope.onboard = true;$scope.$apply();},10);
 	};
+
+	$scope.loadAllPics = function() {
+		$scope.images = [];
+		_.forEach($scope.strips, function(strip){
+			var img = new Image();
+			img.src = strip.pic;
+			$scope.images.push(img);
+		})
+	}
 
 	$scope.init();
 }]);
