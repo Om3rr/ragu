@@ -1,5 +1,7 @@
 app.controller('gameCtrl', ['$scope', function ($scope) {
 	$scope.categories = ["פוליטי", "גאוגרפי", "כלכלי", "חברתי", "תרבותי"];
+	$scope.onboard = true;
+	$scope.onboardz = true;
 	$scope.currentStrips = {};
 	$scope.currentLock = '';
 	$scope.connections = [];
@@ -56,6 +58,12 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 
 	document.onkeypress = function(event){
 		if(event.code === "Space"){
+			if($scope.onboard) {
+				$scope.onboard = false;
+				setTimeout(function(){$scope.onboardz = false;}, 1000);
+				$scope.$apply();
+				return;
+			}
 			$scope.faded = {};
 			$scope.shuffle();
 			$scope.$apply()
@@ -133,15 +141,20 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 		debugger;
 		switch(count){
 			case 0:
-				$scope.content[category] = {video : connection.video};
+				$scope.content[category] = {video : connection.video, 'sub-title-1' : connection['sub-title-1']};
 				break;
 			case 1:
-				$scope.content[category] = {content : connection.content, href: connection.href};
+				$scope.content[category] = {content : connection.content, href: connection.href, 'sub-title-2' : connection['sub-title-2']};
 				break;
 			case 2:
-				$scope.content[category] = {header : connection.title, date : connection.date,  picture : connection.picture};
+				$scope.content[category] = {header : connection.title, date : connection.date,  picture : connection.picture, 'sub-title-3' : connection['sub-title-3']};
 				break;
 		}
+	};
+
+	$scope.resetOnboard = function() {
+		$scope.onboardz = true;
+		setTimeout(function(){$scope.onboard = true;$scope.$apply();},10);
 	};
 
 	$scope.init();

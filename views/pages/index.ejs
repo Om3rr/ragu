@@ -7,15 +7,21 @@
 <!---->
 <body>
 <div ng-controller="gameCtrl" ng-keypress="keypress($event)">
+    <div class="logo" ng-if="!onboard" ng-click="resetOnboard()">
+        <img class="bulb" src="icons/bulb_w.png">
+    </div>
+    <div class="onboarding" ng-class="{'onboard-hide' : !onboard, 'onboard-z' : !onboardz}">
+        Ma kora kapara
+    </div>
     <div ng-repeat="category in categories" class="col-block">
         <div class="col-content">
             <img class="strip" src="{{currentStrips[category]['pic']}}">
             <div class="gradient"></div>
             <div class="strip-container">
-                <img ng-if="!isLightOn(category)" class="bulb" src="icons/bulb_w.png" ng-init="refreshBulb()">
+                <img ng-if="!isLightOn(category)" class="bulb" src="icons/bulb_w.png" ng-init="refreshBulb()" style="opacity: 0.35;">
                 <img ng-if="isLightOn(category)" id="bulb" class="bulb" ng-click="openConnection(category);" src="icons/balb.gif">
                 <img ng-if="currentLock === category" class="lock" id="lock" ng-click="changeLock(category);" src="icons/lock.gif">
-                <img ng-if="currentLock !== category" class="lock" ng-click="changeLock(category)" src="icons/lock_w.png">
+                <img ng-if="currentLock !== category" class="lock" ng-click="changeLock(category)" src="icons/lock_w.png" style="opacity: 0.35;">
                 <span class="name">{{currentStrips[category].name}}</span>
             </div>
         </div>
@@ -37,12 +43,21 @@
                 <span>{{content[category]['content']}}</span>
             </div>
             <div ng-if="content[category]['video']">
-                <iframe style="height: 18vw;width: 18vw;margin: 1.5vw;"
+                <iframe style="height: 20vw;width: 20vw;"
                         src="{{content[category]['video']}}" frameborder="0" allowfullscreen>
                 </iframe>
             </div>
             <div ng-if="content[category]['href']" class="hidden-href">
                 <a href="{{content[category]['href']}}" target="_new">מקור</a>
+            </div>
+            <div ng-if="content[category]['sub-title-1']" class="hidden-sub-title-1">
+                <span>{{content[category]['sub-title-1']}}</span>
+            </div>
+            <div ng-if="content[category]['sub-title-2']" class="hidden-sub-title-2">
+                <span>{{content[category]['sub-title-2']}}</span>
+            </div>
+            <div ng-if="content[category]['sub-title-3']" class="hidden-sub-title-3">
+                <span>{{content[category]['sub-title-3']}}</span>
             </div>
         </div>
     </div>
