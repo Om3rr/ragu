@@ -10,20 +10,28 @@
     <div ng-repeat="category in categories" class="col-block">
         <div class="col-content">
             <img class="strip" src="{{currentStrips[category]['pic']}}">
+            <div class="gradient"></div>
             <div class="strip-container">
-                <img ng-if="!isLightOn(category)" class="bulb" src="icons/bulb.svg">
-                <img ng-if="isLightOn(category)" class="bulb" ng-click="openConnection(category)" src="icons/bulbyellow.svg">
-                <img ng-if="currentLock === category" class="lock" ng-click="changeLock(category)" src="icons/lockyellow.svg">
-                <img ng-if="currentLock !== category" class="lock" ng-click="changeLock(category)" src="icons/lock.svg">
+                <img ng-if="!isLightOn(category)" class="bulb" src="icons/bulb_w.png" ng-init="refreshBulb()">
+                <img ng-if="isLightOn(category)" id="bulb" class="bulb" ng-click="openConnection(category);" src="icons/balb.gif">
+                <img ng-if="currentLock === category" class="lock" id="lock" ng-click="changeLock(category);" src="icons/lock.gif">
+                <img ng-if="currentLock !== category" class="lock" ng-click="changeLock(category)" src="icons/lock_w.png">
                 <span class="name">{{currentStrips[category].name}}</span>
             </div>
         </div>
-        <div class="col-down">
+        <div class="col-down" ng-class="{'hide-text' : fadeCategory(category)}"}">
             {{category}}
+            <!--<span ng-if="!fadeCategory(category)"></span>-->
         </div>
-        <div ng-class="{'col-overlay' : fadeCategory(category)}">
+        <div class="col-overlay" ng-class="{'col-overlay-show' : fadeCategory(category)}">
+            <div ng-if="content[category]['picture']" class="hidden-picture">
+                <img src="{{content[category]['picture']}}">
+            </div>
             <div ng-if="content[category]['header']" class="hidden-header">
                 {{content[category]['header']}}
+            </div>
+            <div ng-if="content[category]['date']" class="hidden-date">
+                {{content[category]['date']}}
             </div>
             <div ng-if="content[category]['content']" class="hidden-content">
                 <span>{{content[category]['content']}}</span>
@@ -34,9 +42,8 @@
                 </iframe>
             </div>
             <div ng-if="content[category]['href']" class="hidden-href">
-                <a href="{{content[category]['href']}}">מקור</a>
+                <a href="{{content[category]['href']}}" target="_new">מקור</a>
             </div>
-
         </div>
     </div>
 </div>

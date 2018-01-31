@@ -33,6 +33,7 @@ body{
 .col-content{
 	height:95vh;
 	position: relative;
+	overflow: hidden;
 }
 
 .col-down{
@@ -49,8 +50,17 @@ body{
 
 .strip{
 	display: block;
-	height:100%;
+	height:100vh;
 	width: 100%;
+}
+.gradient {
+	height: 95vh;
+	width: 20vw;
+	background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,1));
+	z-index: 3;
+	position: absolute;
+	top: 0;
+	opacity: 0.5;
 }
 .name{
 	font-size: 30px;
@@ -64,6 +74,7 @@ body{
 	position: absolute;
 	text-align: center;
 	bottom: 20px;
+	z-index: 4;
 }
 
 .bulb, .lock{
@@ -87,10 +98,22 @@ body{
 	height: 95vh;
 	width: 20vw;
 	background: black;
-	z-index: 3;
+	z-index: 0;
 	position: absolute;
 	top: 0;
-	opacity: 0.85;
+	opacity: 0;
+	transition: opacity .5s
+}
+
+.col-overlay-show{
+	opacity: 0.85 !important;
+	z-index: 5;
+	transition: opacity .3s
+}
+
+
+.hide-text {
+	color : #2B2B2B;
 }
 
 .hidden-content{
@@ -106,7 +129,7 @@ body{
 .hidden-header{
 	color: white;
 	direction: rtl;
-	padding: 30px;
+	padding: 30px 30px 0 30px;
 	font-size: 45px;
 	letter-spacing: 1px;
 	line-height: 51px;
@@ -125,4 +148,23 @@ body{
 	text-decoration: none;
 	font-size: 16px;
 	letter-spacing: 1px;
+}
+
+.hidden-date {
+	text-align: right;
+	padding: 10px 30px 0px 30px;
+	color: white;
+}
+
+
+.hidden-picture {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
+
+
+.bulb {
+	width: 45px;
 }

@@ -8,6 +8,9 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 	$scope.faded = {};
 	$scope.content = {};
 
+	$scope.balb = "icons/balb.gif";
+	$scope.lock = "icons/lock.gif";
+
 
 	$scope.init = function(){
 		var awaits = [$scope.getStrips(), $scope.getConnections()];
@@ -62,7 +65,20 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 	$scope.changeLock = function(cat){
 		$scope.currentLock = $scope.currentLock === cat ? '' : cat;
 		document.body.click();
+		var elem = document.querySelector("#lock");
+		if(elem){
+			elem.src = elem.src
+		}
+
 	};
+
+	$scope.refreshBulb = function () {
+		console.log("refresh bulb");
+		var elem = document.querySelectorAll("#bulb");
+		_.forEach(elem, function(e){
+			e.src = e.src;
+		})
+	}
 
 	$scope.gotMatch = function(cat){
 		return true;
@@ -106,7 +122,7 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 
 	$scope.unfade = function(){
 		$scope.faded = {};
-		$scope.content = {};
+		setTimeout(function(){$scope.content = {}},500);
 	};
 
 	$scope.fadeCategory = function (category) {
@@ -114,15 +130,16 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 	};
 
 	$scope.addConnectionContent = function(category, connection, count){
+		debugger;
 		switch(count){
 			case 0:
-				$scope.content[category] = {video : connection.video, picture : connection.picture};
+				$scope.content[category] = {video : connection.video};
 				break;
 			case 1:
 				$scope.content[category] = {content : connection.content, href: connection.href};
 				break;
 			case 2:
-				$scope.content[category] = {header : connection.title};
+				$scope.content[category] = {header : connection.title, date : connection.date,  picture : connection.picture};
 				break;
 		}
 	};
