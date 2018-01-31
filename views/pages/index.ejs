@@ -10,7 +10,7 @@
     <div class="logo" ng-if="!onboard" ng-click="resetOnboard()">
         <img class="bulb" src="icons/bulb_w.png">
     </div>
-    <div class="onboarding" ng-class="{'onboard-hide' : !onboard, 'onboard-z' : !onboardz}">
+    <div class="onboarding" ng-class="{'onboard-hide' : !onboard, 'onboard-z' : !onboardz}" ng-click="removeOnBoard()">
         Ma kora kapara
     </div>
     <div ng-repeat="category in categories" class="col-block">

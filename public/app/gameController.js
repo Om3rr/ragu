@@ -59,9 +59,7 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 	document.onkeypress = function(event){
 		if(event.code === "Space"){
 			if($scope.onboard) {
-				$scope.onboard = false;
-				setTimeout(function(){$scope.onboardz = false;}, 1000);
-				$scope.$apply();
+				$scope.removeOnBoard();
 				return;
 			}
 			$scope.faded = {};
@@ -150,6 +148,12 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 				$scope.content[category] = {header : connection.title, date : connection.date,  picture : connection.picture, 'sub-title-3' : connection['sub-title-3']};
 				break;
 		}
+	};
+
+	$scope.removeOnBoard = function() {
+		$scope.onboard = false;
+		setTimeout(function(){$scope.onboardz = false;$scope.$apply();}, 1000);
+		$scope.$apply();
 	};
 
 	$scope.resetOnboard = function() {
