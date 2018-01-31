@@ -13,6 +13,11 @@
 	font-style: italic;
 }
 
+
+*:focus {
+	outline: none;
+}
+
 body{
 	font-family: 'days';
 }
