@@ -26,6 +26,7 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 
 	$scope.shuffle = function() {
 		$scope.unfade();
+		$scope.currConn = [];
 		$scope.lights = [];
 		_.forEach($scope.categories, function(cat){
 			if(cat !== $scope.currentLock){
