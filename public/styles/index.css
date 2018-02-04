@@ -217,6 +217,10 @@ body{
 	transition: opacity 1s;
 }
 
+.onboarding img {
+	opacity: 1;
+}
+
 .onboard-hide {
 	opacity: 0;
 }
