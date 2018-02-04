@@ -155,18 +155,6 @@ body{
 	font-weight: bold;
 }
 
-.hidden-href{
-	color: #FFFF00;
-	text-decoration: none;
-	font-size: 13px;
-	cursor: pointer;
-	text-align: right;
-	font-style: italic;
-	padding-top: 7px;
-	padding-left: 10px;
-		padding-right: 30px;
-}
-
 .hidden-href > a {
 	color: #FFFF00;
 	text-decoration: none;
