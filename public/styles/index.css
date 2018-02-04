@@ -161,6 +161,7 @@ body{
 	color: white;
 	padding-top: 0;
 	font-style: italic;
+	cursor: pointer;
 }
 
 .hidden-href > a{
