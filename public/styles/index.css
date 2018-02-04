@@ -215,6 +215,7 @@ body{
 	margin: 0 auto;
 	padding; 0;
 	        display: table-cell;
+		align-items: center;
 }
 
 #space {
