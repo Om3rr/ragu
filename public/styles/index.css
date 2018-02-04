@@ -156,19 +156,23 @@ body{
 }
 
 .hidden-href{
-	text-align: right;
-	padding: 10px;
-	color: white;
-	padding-top: 0;
-	font-style: italic;
+	color: #FFFF00;
+	text-decoration: none;
+	font-size: 13px;
 	cursor: pointer;
+	text-align: right;
+	font-style: italic;
+	padding-top: 5px;
 }
 
 .hidden-href > a{
 	color: #FFFF00;
 	text-decoration: none;
-	font-size: 16px;
-	letter-spacing: 1px;
+	font-size: 13px;
+	cursor: pointer;
+	text-align: right;
+	font-style: italic;
+	padding-top: 5px;
 }
 
 .hidden-date {
