@@ -126,11 +126,11 @@ body{
 .hidden-content{
 	color: white;
 	text-align: right;
-	font-size: 18px;
+	font-size: 21px;
 	direction: rtl;
 	padding: 30px;
 	padding-top: 50px;
-	line-height: 1.25;
+	line-height: 1.5;
 }
 
 .hidden-header{
@@ -148,7 +148,7 @@ body{
 	padding: 30px;
 	color: white;
 	padding-top: 0;
-	font-weight: italic;
+	font-style: italic;
 }
 .hidden-href > a{
 	color: #FFFF00;
@@ -184,7 +184,13 @@ body{
 }
 
 .hidden-sub-title-2{
-
+	color: white;
+	text-align: right;
+	font-size: 18px;
+	direction: rtl;
+	padding: 30px;
+	padding-top: 50px;
+	line-height: 1.25;
 }
 .hidden-sub-title-3{
 
