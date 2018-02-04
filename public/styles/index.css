@@ -155,7 +155,7 @@ body{
 	font-weight: bold;
 }
 
-.hidden-href > a {
+.hidden-href {
 	color: #FFFF00;
 	text-decoration: none;
 	font-size: 13px;
