@@ -130,7 +130,7 @@ body{
 	direction: rtl;
 	padding: 30px;
 	padding-top: 50px;
-	line-height: 1.5;
+	line-height: 1.3;
 }
 
 .hidden-header{
@@ -189,7 +189,7 @@ body{
 	font-size: 18px;
 	direction: rtl;
 	padding: 30px;
-	padding-top: 50px;
+	padding-top: 15px;
 	line-height: 1.25;
 }
 .hidden-sub-title-3{
