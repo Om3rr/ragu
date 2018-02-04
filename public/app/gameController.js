@@ -1,5 +1,5 @@
 app.controller('gameCtrl', ['$scope', function ($scope) {
-	$scope.categories = ["פוליטי", "גאוגרפי", "כלכלי", "חברתי", "תרבותי"];
+	$scope.categories = ["פוליטי", "גיאוגרפי", "כלכלי", "חברתי", "תרבותי"];
 	$scope.onboard = true;
 	$scope.onboardz = true;
 	$scope.currentStrips = {};
