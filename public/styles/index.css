@@ -41,20 +41,20 @@ body{
 }
 
 .col-content{
-	height:95vh;
+	height:96vh;
 	position: relative;
 	overflow: hidden;
 }
 
 .col-down{
 	text-align: center;
-	height: 5vh;
+	height: 4vh;
 	background: #2B2B2B;
 	color: #FFFF00;
 	font-family: days;
 	font-style: italic;
-	font-size: 13px;
-	letter-spacing: 4px;
+	font-size: 12px;
+	letter-spacing: 3px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -92,7 +92,7 @@ body{
 .bulb, .lock{
 	display: block;
 	margin: auto;
-	width: 40px;
+	width: 35px;
 	margin-bottom: 15px;
 }
 
