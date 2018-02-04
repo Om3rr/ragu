@@ -47,14 +47,14 @@
                         src="{{content[category]['video']}}" frameborder="0" allowfullscreen>
                 </iframe>
             </div>
+            <div ng-if="content[category]['sub-title-2']" class="hidden-sub-title-2">
+                <span>{{content[category]['sub-title-2']}}</span>
+            </div>
             <div ng-if="content[category]['href']" class="hidden-href">
                 <a href="{{content[category]['href']}}" target="_new">מקור</a>
             </div>
             <div ng-if="content[category]['sub-title-1']" class="hidden-sub-title-1">
                 <span>{{content[category]['sub-title-1']}}</span>
-            </div>
-            <div ng-if="content[category]['sub-title-2']" class="hidden-sub-title-2">
-                <span>{{content[category]['sub-title-2']}}</span>
             </div>
             <div ng-if="content[category]['sub-title-3']" class="hidden-sub-title-3">
                 <span>{{content[category]['sub-title-3']}}</span>
