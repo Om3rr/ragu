@@ -30,10 +30,6 @@
             {{category}}
             <!--<span ng-if="!fadeCategory(category)"></span>-->
         </div>
-        <div class="col-overlay" ng-class="{'col-overlay-show' : fadeCategory(category)}">
-            <div ng-if="content[category]['picture']" class="hidden-picture">
-                <img src="{{content[category]['picture']}}">
-            </div>
             <div ng-if="content[category]['header']" class="hidden-header">
                 {{content[category]['header']}}
             </div>
@@ -47,6 +43,10 @@
                 <iframe style="height: 20vw;width: 20vw;"
                         src="{{content[category]['video']}}" frameborder="0" allowfullscreen>
                 </iframe>
+            </div>
+                    <div class="col-overlay" ng-class="{'col-overlay-show' : fadeCategory(category)}">
+            <div ng-if="content[category]['picture']" class="hidden-picture">
+                <img src="{{content[category]['picture']}}">
             </div>
             <div ng-if="content[category]['sub-title-2']" class="hidden-sub-title-2">
                 <span>{{content[category]['sub-title-2']}}</span>
