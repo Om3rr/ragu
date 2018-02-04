@@ -213,6 +213,8 @@ body{
     	background-image: url("black.png");
 	z-index: 172;
 	transition: opacity 0.7s;
+	margin: 0 auto;
+	padding; 0 auto;
 }
 
 
