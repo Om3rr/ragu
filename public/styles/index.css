@@ -164,7 +164,7 @@ body{
 	font-style: italic;
 	padding-top: 7px;
 	padding-left: 10px;
-
+		padding-right: 30px;
 }
 
 .hidden-href > a {
@@ -176,6 +176,7 @@ body{
 	font-style: italic;
 	padding-top: 7px;
 	padding-left: 10px;
+	padding-right: 30px;
 }
 
 .hidden-picture {
@@ -183,6 +184,7 @@ body{
 	display: flex;
 	justify-content: flex-start;
 	width: 20vw;
+	padding-top: 180px;
 }
 
 .hidden-picture > img {
