@@ -37,7 +37,7 @@
             <div ng-if="content[category]['header']" class="hidden-header">
                 {{content[category]['header']}}
             </div>
-            <div ng-if="content[category]['date']&&['href']" class="hidden-date" "hidden-href">
+            <div ng-if="content[category]['date']&&content[category]['href']" class="hidden-date hidden-href">
                 <a href="{{content[category]['href']}}" target="_new">{{content[category]['date']}}</a>
             </div>
 
