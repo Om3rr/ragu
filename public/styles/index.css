@@ -92,14 +92,13 @@ body{
 .lock{
 	display: block;
 	margin: auto;
-	width: 32px;
+	width: 33px;
 	margin-bottom: 15px;
 }
 
 .bulb {
 	display: block;
 	margin: auto;
-	width: 27px;
 	margin-bottom: 15px;
 }
 
