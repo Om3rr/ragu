@@ -159,7 +159,6 @@ body{
 	color: #FFFF00;
 	text-decoration: none;
 	font-size: 13px;
-	cursor: pointer;
 	text-align: right;
 	font-style: italic;
 	padding-top: 7px;
@@ -170,9 +169,18 @@ body{
 .hidden-href > a {
 	color: #FFFF00;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .hidden-picture {
+	align-items: center;
+	display: flex;
+	justify-content: flex-start;
+	width: 20vw;
+	padding-top: 180px;
+}
+
+.hidden-video {
 	align-items: center;
 	display: flex;
 	justify-content: flex-start;
