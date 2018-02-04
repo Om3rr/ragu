@@ -141,10 +141,10 @@ app.controller('gameCtrl', ['$scope', function ($scope) {
 		debugger;
 		switch(count){
 			case 0:
-				$scope.content[category] = {video : connection.video, 'sub-title-1' : connection['sub-title-1']};
+				$scope.content[category] = {video : connection.video, href: connection.href, 'sub-title-1' : connection['sub-title-1']};
 				break;
 			case 1:
-				$scope.content[category] = {content : connection.content, href: connection.href, 'sub-title-2' : connection['sub-title-2']};
+				$scope.content[category] = {content : connection.content, 'sub-title-2' : connection['sub-title-2']};
 				break;
 			case 2:
 				$scope.content[category] = {header : connection.title, date : connection.date,  picture : connection.picture, 'sub-title-3' : connection['sub-title-3']};
