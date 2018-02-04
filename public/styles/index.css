@@ -217,6 +217,10 @@ body{
 	padding; 0 auto;
 }
 
+#space {
+	width: 50%;
+}
+
 
 .onboard-hide {
 	opacity: 0;
