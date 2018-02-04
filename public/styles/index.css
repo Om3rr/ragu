@@ -167,6 +167,11 @@ body{
 	padding-right: 30px;
 }
 
+.hidden-href > a {
+	color: #FFFF00;
+	text-decoration: none;
+}
+
 .hidden-picture {
 	align-items: center;
 	display: flex;
