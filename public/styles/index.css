@@ -242,8 +242,8 @@ body{
 .logo {
 	position: absolute;
 	z-index: 200;
-	right: 30px;
-	top: 30px;
+	right: 10px;
+	top: 10px;
 	opacity: 0.7;
 	transition: opacity 0.5s;
 }
