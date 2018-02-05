@@ -227,6 +227,10 @@ body{
 	letter-spacing: 1.1;
 }
 
+.onboarding span {
+	font-style: bold;
+}
+
 #space {
 }
 
