@@ -222,15 +222,16 @@ body{
     	margin-right: auto;
 	text-align: center;
 	color: white;
-	font-size: 15px;
+	font-size: 16px;
 	padding-top: 19%;
+	letter-spacing: 1.1;
 }
 
 #space {
 }
 
 #logo {
-	width: 7%;
+	width: 6%;
 	padding-bottom: 15px;
 }
 
