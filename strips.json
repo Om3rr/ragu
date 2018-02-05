@@ -1,10 +1,5 @@
 [
   {
-    "name": "עמידר",
-    "pic": "amidar.png",
-    "category": "כלכלי"
-  },
-  {
     "name": "ארגמן",
     "pic": "argaman.png",
     "category": "כלכלי"
@@ -35,11 +30,6 @@
     "category": "כלכלי"
   },
   {
-    "name": "מפעלי ים המלח",
-    "pic": "mifal.png",
-    "category": "כלכלי"
-  },
-  {
     "name": "בתי ספר מקצועיים",
     "pic": "profschool.png",
     "category": "כלכלי"
@@ -67,11 +57,6 @@
   {
     "name": "הרצל",
     "pic": "hertzel.png",
-    "category": "פוליטי"
-  },
-  {
-    "name": "איציק שמולי",
-    "pic": "itzik shmuli.png",
     "category": "פוליטי"
   },
   {
@@ -130,16 +115,6 @@
     "category": "חברתי"
   },
   {
-    "name": "מבצע שלמה",
-    "pic": "mivtza shlomo.png",
-    "category": "חברתי"
-  },
-  {
-    "name": "נערי רפול",
-    "pic": "nearei raful.png",
-    "category": "חברתי"
-  },
-  {
     "name": "שוברים שתיקה",
     "pic": "shovrim shtika.png",
     "category": "חברתי"
@@ -177,11 +152,6 @@
   {
     "name": "בר רפאלי",
     "pic": "bar refaeli.png",
-    "category": "תרבותי"
-  },
-  {
-    "name": "הקאמרי",
-    "pic": "cameri.png",
     "category": "תרבותי"
   },
   {
