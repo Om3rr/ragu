@@ -10,6 +10,11 @@
     "category": "כלכלי"
   },
   {
+    "name": "רמת השרון",
+    "pic": "ramatsharon.png",
+    "category": "גיאוגרפי"
+  },
+  {
     "name": "מפעל אתא",
     "pic": "atta factory.png",
     "category": "כלכלי"
