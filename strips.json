@@ -170,11 +170,6 @@
     "category": "תרבותי"
   },
   {
-    "name": "פסטיגל",
-    "pic": "pestigal.png",
-    "category": "תרבותי"
-  },
-  {
     "name": "פרס ישראל",
     "pic": "prass israel.png",
     "category": "תרבותי"
@@ -237,11 +232,6 @@
   {
     "name": "שביל ישראל",
     "pic": "shvil israel.png",
-    "category": "גאוגרפי"
-  },
-  {
-    "name": "סידני עלי",
-    "pic": "sidni ali.png",
     "category": "גאוגרפי"
   },
   {
